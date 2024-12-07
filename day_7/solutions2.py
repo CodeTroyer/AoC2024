@@ -66,12 +66,9 @@ def is_valid(target, values):
 def main():
     data = file_utils.get_file_content(INPUT_FILE)
     total = 0
-    counter = 1
     for line in data:
-        print(counter)
         target, values = line.split(": ")
         total += is_valid(int(target), values)
-        counter += 1
     print(total)
 
 
